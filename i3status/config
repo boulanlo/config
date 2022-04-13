@@ -1,0 +1,44 @@
+general {
+	colors = true
+	interval = 5
+	color_good = '#ecd83a'
+	color_bad = '#ec3a4e'
+	color_degraded = '#ec3a4e'
+}
+
+order += "ethernet _first_"
+order += "volume master"
+order += "battery all"
+order += "memory"
+order += "tztime local"
+
+ethernet _first_ {
+	format_up = "ETH: %ip"
+	format_down = "ETH DOWN"
+}
+
+volume master {
+	format = "VOL %volume"
+	format_muted = "VOL MUTED"
+	device = "sysdefault"
+	mixer = "Master"
+}
+
+battery all {
+	format = "BAT %status %percentage %remaining"
+	status_chr = "CHR"
+	status_bat = ""
+	status_unk = "UNK"
+	status_full = "FULL"
+	last_full_capacity = true
+}
+
+memory {
+	format = "RAM %used"
+	threshold_degraded = "1G"
+	format_degraded = "MEMORY < %available" 
+}
+
+tztime local {
+	format = "%H:%M:%S %Y-%m-%d"
+}
