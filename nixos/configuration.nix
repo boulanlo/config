@@ -8,6 +8,7 @@ let
   pkgs-unstable = import (fetchTarball http://nixos.org/channels/nixos-unstable/nixexprs.tar.xz) {};
   unstable-packages = with pkgs-unstable; [
   ];
+  myEmacs = import ./emacs_with_packages.nix { inherit pkgs; };
 in {
   imports =
     [ # Include the results of the hardware scan.
@@ -77,7 +78,7 @@ in {
     firefox
     git
     tmux
-    emacs
+    myEmacs
     kitty
     manpages
     bc
