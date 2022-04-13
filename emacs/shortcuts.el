@@ -1,8 +1,5 @@
 ;; shortcuts.el --- Base shortcuts for emacs
 
-(defconst my/config-file-dir "/home/louis/projects/config/emacs/")
-(defconst my/config-file (concat my/config-file-dir "main.el"))
-
 ;; Edit config file
 (defun my/open-config ()
   (interactive)

@@ -6,6 +6,9 @@
   (if (not (string= "/home/louis/projects/config/emacs/" (car (last load-path))))
     (push "/home/louis/projects/config/emacs/" load-path))
 
+  (defvar my/config-file load-file-name)
+  (defvar my/config-file-dir (file-name-directory my/config-file))
+  
   (load "editor")
   (load "theme")
   (load "shortcuts")
