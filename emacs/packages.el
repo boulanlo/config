@@ -5,3 +5,4 @@
 (load "packages/flycheck")
 (load "packages/company")
 (load "packages/ivy")
+(load "packages/org")
