@@ -8,7 +8,7 @@ let
   pkgs-unstable = import (fetchTarball http://nixos.org/channels/nixos-unstable/nixexprs.tar.xz) {};
   unstable-packages = with pkgs-unstable; [
   ];
-  myEmacs = import ./emacs_with_packages.nix { inherit pkgs; };
+  emacs_with_packages = import ./emacs_with_packages.nix { inherit pkgs; };
 in {
   imports =
     [ # Include the results of the hardware scan.
@@ -78,7 +78,6 @@ in {
     firefox
     git
     tmux
-    myEmacs
     kitty
     manpages
     bc
@@ -88,7 +87,9 @@ in {
     bat
     binutils
     feh
-  ] ++ unstable-packages;
+  ] ++ unstable-packages ++ [
+    emacs_with_packages
+  ];
 
   fonts.fonts = with pkgs; [
     iosevka

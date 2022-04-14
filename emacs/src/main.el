@@ -3,12 +3,14 @@
 (let ((old-gc-threshold gc-cons-threshold))
   (setq gc-cons-threshold 100000000)
 
-  (if (not (string= "/home/louis/projects/config/emacs/" (car (last load-path))))
-    (push "/home/louis/projects/config/emacs/" load-path))
-
   (defvar my/config-file load-file-name)
   (defvar my/config-file-dir (file-name-directory my/config-file))
-  
+
+  (if (not (string= my/config-file-dir (car load-path)))
+      (push my/config-file-dir load-path))
+
+  (package-initialize)
+
   (load "editor")
   (load "theme")
   (load "shortcuts")
