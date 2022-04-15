@@ -12,6 +12,7 @@ emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
     projectile
     company
     counsel
+    htmlize
 ]) ++ (with epkgs.melpaPackages; [
     nix-mode
     flycheck
