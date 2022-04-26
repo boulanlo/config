@@ -13,6 +13,9 @@ emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
     company
     counsel
     htmlize
+    rust-mode
+    lsp-mode
+    lsp-ui
 ]) ++ (with epkgs.melpaPackages; [
     nix-mode
     flycheck

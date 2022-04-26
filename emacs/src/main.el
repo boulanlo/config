@@ -9,6 +9,9 @@
   (if (not (string= my/config-file-dir (car load-path)))
       (push my/config-file-dir load-path))
 
+  (defun my/is-in-nix-shell ()
+    (getenv "IN_NIX_SHELL"))
+  
   (package-initialize)
 
   (load "editor")
