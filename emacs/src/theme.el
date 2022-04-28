@@ -18,18 +18,18 @@
 		    :foreground "#ffffff"
 		    :background "#000000"
 		    :family "Iosevka"
-		    :height 140
+		    :height 100
 		    :weight 'normal
 		    :width 'normal)
 
 (set-face-attribute 'mode-line nil
-		    :height 140
+		    :height 100
 		    :box '(:color "#222222" :line-width 3)
 		    :foreground "#ffffff"
 		    :background "#222222")
 
 (set-face-attribute 'mode-line-inactive nil
-		    :height 140
+		    :height 100
 		    :box '(:color "#333333" :line-width 3)
 		    :foreground "#dddddd"
 		    :background "#333333")

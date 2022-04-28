@@ -44,7 +44,9 @@ in {
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-
+ 
+  # Disable bluetooth
+  hardware.bluetooth.enable = false;
 
   # services.xserver.displayManager.enable = true;
   services.xserver.displayManager.defaultSession = "none+i3";
@@ -70,6 +72,11 @@ in {
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
   };
 
+  # NVidia video drivers
+  nixpkgs.config.allowUnfree = true;
+  # hardware.nvidia.modesetting.enable = true;
+  services.xserver.videoDrivers = [ "nvidia" ];
+  
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [

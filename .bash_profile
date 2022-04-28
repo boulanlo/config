@@ -25,9 +25,6 @@ bash_prompt() {
 
 export PATH=$PATH:/home/louis/bin
 
-# Adjust screen layout
-~/.screenlayout/default.sh
-
 # Kitty terminal configuration
 if [ "$TERM" == "xterm-kitty" ]; then
 	alias icat="kitty +kitten icat"

@@ -16,6 +16,7 @@ emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
     rust-mode
     lsp-mode
     lsp-ui
+    graphviz-dot-mode
 ]) ++ (with epkgs.melpaPackages; [
     nix-mode
     flycheck
