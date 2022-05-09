@@ -7,6 +7,7 @@ general {
 }
 
 order += "ethernet _first_"
+order += "wireless wlp147s0"
 order += "volume master"
 order += "battery all"
 order += "memory"
@@ -15,6 +16,11 @@ order += "tztime local"
 ethernet _first_ {
 	format_up = "ETH: %ip"
 	format_down = "ETH DOWN"
+}
+
+wireless wlp147s0 {
+	 format_up = "WIFI: %ip"
+	 format_down = "WIFI DOWN"
 }
 
 volume master {

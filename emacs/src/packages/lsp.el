@@ -5,4 +5,4 @@
 
 (setq lsp-ui-doc-position 'bottom)
 (setq lsp-ui-sideline-enable nil)
-
+(setq lsp-rust-analyzer-cargo-watch-command "clippy")

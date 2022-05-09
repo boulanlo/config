@@ -39,3 +39,12 @@
 
 (set-face-attribute 'region nil
 		    :background "#333333")
+
+(set-face-attribute 'fixed-pitch nil
+		    :family "Iosevka")
+
+(set-face-attribute 'font-lock-comment-face nil
+		    :foreground "#aaaaaa")
+
+
+
