@@ -139,6 +139,20 @@ bindsym $mod+Shift+underscore move container to workspace number $ws8
 bindsym $mod+Shift+ccedilla move container to workspace number $ws9
 bindsym $mod+Shift+agrave move container to workspace number $ws10
 
+bindsym $mod+Control+ampersand move workspace to output DP-5
+bindsym $mod+Control+eacute move workspace to output DP-4
+
+workspace $ws1 output DP-5 DP-4
+workspace $ws2 output DP-5 DP-4
+workspace $ws3 output DP-5 DP-4
+workspace $ws4 output DP-5 DP-4
+workspace $ws5 output DP-5 DP-4
+workspace $ws6 output DP-5 DP-4
+workspace $ws7 output DP-5 DP-4
+workspace $ws8 output DP-5 DP-4
+workspace $ws9 output DP-5 DP-4
+workspace $ws10 output DP-4 DP-5
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)

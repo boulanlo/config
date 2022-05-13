@@ -25,6 +25,11 @@ bash_prompt() {
 
 export PATH=$PATH:/home/louis/bin
 
+# Nix command aliases
+alias nd="nix develop"
+alias nb="nix build"
+alias nors="nixos-rebuild switch"
+
 # Kitty terminal configuration
 if [ "$TERM" == "xterm-kitty" ]; then
 	alias icat="kitty +kitten icat"

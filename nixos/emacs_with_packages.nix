@@ -18,6 +18,7 @@ emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
     lsp-ui
     graphviz-dot-mode
     pkgs.emacs27Packages.org-contrib
+    citeproc
 ]) ++ (with epkgs.melpaPackages; [
     nix-mode
     flycheck
