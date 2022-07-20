@@ -11,3 +11,6 @@
 
 ;; Move with arrows
 (windmove-default-keybindings 'meta)
+
+;; Allow some variables to be set locally
+(setq safe-local-variable-values '((org-tags-column . -120)))

@@ -8,7 +8,7 @@ in
 emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
     magit
     ivy
-    pkgs.emacs27Packages.undo-tree
+    pkgs.emacs28Packages.undo-tree
     projectile
     company
     counsel
@@ -17,7 +17,7 @@ emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
     lsp-mode
     lsp-ui
     graphviz-dot-mode
-    pkgs.emacs27Packages.org-contrib
+    pkgs.emacs28Packages.org-contrib
     citeproc
 ]) ++ (with epkgs.melpaPackages; [
     nix-mode

@@ -19,7 +19,7 @@ in {
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.kernelPackages = pkgs.linuxPackages_5_17;
+  boot.kernelPackages = pkgs.linuxPackages_5_18;
 
   networking.hostName = "den-nixos"; # Define your hostname.
   networking.networkmanager.enable = true;
@@ -88,7 +88,7 @@ in {
     git
     tmux
     kitty
-    manpages
+    man-pages
     bc
     tree
     brightnessctl
