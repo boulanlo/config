@@ -133,7 +133,7 @@ in {
   system.stateVersion = "21.11"; # Did you read the comment?
 
   nix = {
-    package = pkgs.nix_2_4;
+    package = pkgs.nixVersions.nix_2_9;
     extraOptions = ''
       experimental-features = nix-command flakes
     '';
