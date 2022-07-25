@@ -25,7 +25,7 @@
 (defvar my/modeline-colors
   (pcase-let ((`(,main-color ,main-color-indicator ,light-color ,light-color-indicator)
 	       (if (my/is-in-nix-shell)
-		   (list "#5A2987" "#7134A9" "#9B70C2" "#B899D4")
+		   (list "#7134A9" "#9B70C2" "#5A2987" "#B899D4")
 		 (list "#222222" "#444444" "#333333" "#555555"))))
     `(:main-color ,main-color
       :main-color-indicator ,main-color-indicator
