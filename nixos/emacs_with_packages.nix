@@ -25,6 +25,12 @@ emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
 ]));
   config = import ../emacs/emacs_config.nix { inherit pkgs; };
 in
-  pkgs.writeShellScriptBin "emacs" ''
+{
+  emacs = pkgs.writeShellScriptBin "emacs" ''
     exec ${emacs_with_packages}/bin/emacs -q --load ${config}/main.el $@
-  '' 
+  '';
+
+  etags = pkgs.writeShellScriptBin "etags" ''
+    exec ${emacs_with_packages}/bin/etags $@
+  '';
+}

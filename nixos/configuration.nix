@@ -98,11 +98,15 @@ in {
     feh
     firmwareLinuxNonfree
   ] ++ unstable-packages ++ [
-    emacs_with_packages
+    emacs_with_packages.emacs
+    emacs_with_packages.etags
   ];
 
   fonts.fonts = with pkgs; [
     iosevka
+    noto-fonts
+    noto-fonts-extra
+    noto-fonts-cjk
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
